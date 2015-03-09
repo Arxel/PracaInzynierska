@@ -2,12 +2,18 @@
     <string name="app_name">Smaczny Wrocław!</string>
     <string name="action_settings">Ustawienia</string>
     <string name="search_title">Szukaj</string>
+    <string name="title_activity_maps">Map</string>
     <string-array name="Functions">
         <item>Aktualności</item>
         <item>Szlaki</item>
         <item>Przeglądaj</item>
         <item>Blisko mnie</item>
-        <item>Zniżki?</item>
+        <item>Ustawienia</item>
+        <item>O aplikacji</item>
 
     </string-array>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_trail_maps">Map</string>
 </resources>
