@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -28,20 +27,24 @@
         </activity>
         <activity
             android:name=".MapsActivity"
-            android:label="Smaczny Wrocław!">
-
+            android:label="Smaczny Wrocław!" >
+        </activity>
+        <activity
+            android:name=".TrailMaps"
+            android:label="@string/title_activity_trail_maps" >
         </activity>
 
-        <activity android:name="com.example.user.prototype_smacznywroclaw.TrailMaps"
-            android:label="@string/title_activity_trail_maps">
-
-        </activity>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyDV8RN9gaHrGlJP7iZn1SEk9B5Hk8T8z_g" />
+
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news" >
+        </activity>
     </application>
 
 </manifest>

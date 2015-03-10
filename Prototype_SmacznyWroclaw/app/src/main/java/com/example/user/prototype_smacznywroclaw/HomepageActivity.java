@@ -1,9 +1,12 @@
 package com.example.user.prototype_smacznywroclaw;
 
 
+import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -36,9 +39,14 @@ public class HomepageActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
+                    case 0:
+                        Intent newsIntent = new Intent(HomepageActivity.this,NewsActivity.class);
+                        HomepageActivity.this.startActivity(newsIntent);
+                        break;
                     case 1:
                         Intent trailsIntent = new Intent(HomepageActivity.this,TrailMaps.class);
                         HomepageActivity.this.startActivity(trailsIntent);
+                        break;
                     case 3:
                         Intent mapIntent = new Intent(HomepageActivity.this, MapsActivity.class);
                         HomepageActivity.this.startActivity(mapIntent);

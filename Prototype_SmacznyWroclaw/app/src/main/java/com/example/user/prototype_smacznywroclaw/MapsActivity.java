@@ -2,6 +2,7 @@ package com.example.user.prototype_smacznywroclaw;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
