@@ -19,4 +19,8 @@
     <string name="title_activity_news">NewsActivity</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
+    <string name="title_activity_select_trail">SelectTrailActivity</string>
+    <string name="title_activity_krasnal_trail">KrasnalTrailActivity</string>
+    <string name="title_activity_object_map">ObjectMapActivity</string>
 </resources>

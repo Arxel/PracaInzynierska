@@ -45,6 +45,22 @@
             android:name=".NewsActivity"
             android:label="@string/title_activity_news" >
         </activity>
+        <activity
+            android:name=".FragmentActivity"
+            android:label="@string/title_activity_fragment" >
+        </activity>
+        <activity
+            android:name=".SelectTrailActivity"
+            android:label="@string/title_activity_select_trail" >
+        </activity>
+        <activity
+            android:name=".KrasnalTrailActivity"
+            android:label="@string/title_activity_krasnal_trail" >
+        </activity>
+        <activity
+            android:name=".ObjectMapActivity"
+            android:label="@string/title_activity_object_map" >
+        </activity>
     </application>
 
 </manifest>

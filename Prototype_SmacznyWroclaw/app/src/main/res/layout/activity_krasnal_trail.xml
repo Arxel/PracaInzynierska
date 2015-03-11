@@ -1,0 +1,152 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Sladami krasnali"
+                    android:id="@+id/textView11"
+                    android:textSize="45dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="2"
+                    android:layout_gravity="center" />
+
+                <ImageButton
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageButton1"
+                    android:src="@drawable/ic_action_map"
+                    android:background="#00ffffff"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="szlakKrasnale"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="51dp"
+                    android:layout_height="51dp"
+                    android:src="@drawable/leftarrow"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/o1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:onClick="objectMap"/>
+
+                        <ImageView
+                            android:id="@+id/imageView11"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/o2"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView12"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/o3"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView13"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/o4"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView14"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/o5"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="51dp"
+                    android:layout_height="51dp"
+                    android:src="@drawable/rightarrow"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                android:id="@+id/textView12"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" >
+
+        <ListView android:id="@+id/drawerList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:entries="@array/Functions"
+            android:choiceMode="singleChoice"
+            android:dividerHeight="1dp"
+            android:divider="@android:color/darker_gray"
+            android:background="#FFFFFF"/>
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

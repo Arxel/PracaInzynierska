@@ -1,18 +1,15 @@
 package com.example.user.prototype_smacznywroclaw;
 
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
-import android.webkit.WebViewFragment;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -23,17 +20,31 @@ public class HomepageActivity extends ActionBarActivity {
     private DrawerLayout drawerLayout;
     private ListView drawerList;
     private int selectedPosition;
-
+    private ActionBarDrawerToggle mDrawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
+
+        mDrawerToggle = new ActionBarDrawerToggle(
+                this,                  /* host Activity */
+                drawerLayout,         /* DrawerLayout object */
+                R.string.app_name,  /* "open drawer" description */
+                R.string.app_name  /* "close drawer" description */
+        );
+
+        // Set the drawer toggle as the DrawerListener
+
 
         optionsTitles = getResources().getStringArray(R.array.Functions);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         drawerList = (ListView) findViewById(R.id.drawerList);
 
         drawerList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, optionsTitles));
+
+        drawerLayout.setDrawerListener(mDrawerToggle);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -44,7 +55,7 @@ public class HomepageActivity extends ActionBarActivity {
                         HomepageActivity.this.startActivity(newsIntent);
                         break;
                     case 1:
-                        Intent trailsIntent = new Intent(HomepageActivity.this,TrailMaps.class);
+                        Intent trailsIntent = new Intent(HomepageActivity.this,SelectTrailActivity.class);
                         HomepageActivity.this.startActivity(trailsIntent);
                         break;
                     case 3:
