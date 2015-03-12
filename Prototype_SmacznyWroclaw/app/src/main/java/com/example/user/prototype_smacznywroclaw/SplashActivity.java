@@ -9,7 +9,7 @@ import android.view.View;
 
 public class SplashActivity extends ActionBarActivity {
 
-    private static final int CZAS = 1000;//After debug change to 5000
+    private static final int CZAS = 3000;//After debug change to 5000
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
